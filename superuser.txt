@@ -1,0 +1,10 @@
+Username: MAPG_admin
+Password: password123
+
+
+
+1. create model
+2. register model
+3. serialize model
+4. create viewset of the model
+5. link urls of the model
