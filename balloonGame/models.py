@@ -14,5 +14,5 @@ class balloonGameData(models.Model):
 
 
     def __str__(self):
-        return self.uid
+        return str(self.uid)
 

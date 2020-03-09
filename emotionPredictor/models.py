@@ -10,4 +10,4 @@ class emotionPredictorData(models.Model):
     answers = ArrayField(models.IntegerField())
 
     def __str__(self):
-        return self.uid
+        return str(self.uid)
