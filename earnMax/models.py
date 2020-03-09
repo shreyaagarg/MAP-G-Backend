@@ -9,3 +9,6 @@ class earnMaxData(models.Model):
     pile = ArrayField(models.IntegerField())
     scores = ArrayField(models.IntegerField())
     total = models.IntegerField()
+
+    def __str__(self):
+        return str(self.uid)
