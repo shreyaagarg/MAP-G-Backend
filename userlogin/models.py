@@ -9,6 +9,8 @@ class UserData(models.Model):
     age = models.IntegerField()
     teachingExp = models.IntegerField()
     teachingField = models.IntegerField()
+    openID = models.CharField(max_length=100, default='000')
+    gender = models.IntegerField(default=1)
 
     def __str__(self):
         return str(self.uid)
