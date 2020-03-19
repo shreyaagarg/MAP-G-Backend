@@ -5,9 +5,9 @@ from userlogin.models import UserData
 # Create your models here.
 
 class emotionPredictorData(models.Model):
-    email = models.ForeignKey(UserData, on_delete=models.CASCADE)
+    emailId = models.EmailField(max_length=100, primary_key=True, default='')
     timeChosen = ArrayField(models.DateTimeField())
     answers = ArrayField(models.IntegerField())
 
     def __str__(self):
-        return str(self.email)
+        return str(self.emailId)

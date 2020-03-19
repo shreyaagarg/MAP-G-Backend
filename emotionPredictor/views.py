@@ -6,6 +6,6 @@ from .models import emotionPredictorData
 # Create your views here.
 
 class EmotionPredictorViewSet(viewsets.ModelViewSet):
-    queryset = emotionPredictorData.objects.all().order_by('email')
+    queryset = emotionPredictorData.objects.all().order_by('emailId')
     serializer_class = emotionPredictorDataSerializer
 

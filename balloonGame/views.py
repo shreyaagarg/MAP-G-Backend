@@ -6,6 +6,6 @@ from .models import balloonGameData
 # Create your views here.
 
 class BalloonViewSet(viewsets.ModelViewSet):
-    queryset = balloonGameData.objects.all().order_by('email')
+    queryset = balloonGameData.objects.all().order_by('emailId')
     serializer_class = balloonGameDataSerializer
 
