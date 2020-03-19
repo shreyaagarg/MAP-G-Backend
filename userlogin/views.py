@@ -7,7 +7,7 @@ from django.http import JsonResponse
 # Create your views here.
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = UserData.objects.all().order_by('uid')
+    queryset = UserData.objects.all().order_by('email')
     serializer_class = UserSerializer
 
 

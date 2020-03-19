@@ -4,4 +4,4 @@ from .models import balloonGameData
 class balloonGameDataSerializer(serializers.ModelSerializer):
     class Meta():
         model = balloonGameData
-        fields = ('uid', 'color', 'clicks', 'clicks', 'amount', 'total')
+        fields = ('email', 'color', 'clicks', 'clicks', 'amount', 'total')

@@ -5,7 +5,7 @@ from userlogin.models import UserData
 # Create your models here.
 
 class listeningGameData(models.Model):
-    uid = models.ForeignKey(UserData, on_delete=models.CASCADE)
+    email = models.ForeignKey(UserData, on_delete=models.CASCADE)
     startTime = models.DateTimeField()
     ans1 = models.DateTimeField()
     ans2 = models.DateTimeField()
@@ -16,5 +16,5 @@ class listeningGameData(models.Model):
 
 
     def __str__(self):
-        return str(self.uid)
+        return str(self.email)
     
