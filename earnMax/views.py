@@ -6,6 +6,6 @@ from .models import earnMaxData
 # Create your views here.
 
 class EarnMaxViewSet(viewsets.ModelViewSet):
-    queryset = earnMaxData.objects.all().order_by('uid')
+    queryset = earnMaxData.objects.all().order_by('email')
     serializer_class = earnMaxDataSerializer
 

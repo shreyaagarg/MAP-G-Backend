@@ -4,4 +4,4 @@ from .models import emotionPredictorData
 class emotionPredictorDataSerializer(serializers.ModelSerializer):
     class Meta():
         model = emotionPredictorData
-        fields = ('uid', 'timeChosen', 'answers')
+        fields = ('email', 'timeChosen', 'answers')
