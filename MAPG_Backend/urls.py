@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from userlogin import views as userLoginViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     path('earnMax', include('earnMax.urls')),
     path('emotionPredictor', include('emotionPredictor.urls')),
     path('listeningGame', include('listeningGame.urls')),
+    path('userExist/', userLoginViews.userExist, name='userExist'),
 ]
