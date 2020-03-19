@@ -16,5 +16,5 @@ class listeningGameData(models.Model):
 
 
     def __str__(self):
-        return str(self.uid)
+        return str(self.email)
     

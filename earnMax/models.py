@@ -11,4 +11,4 @@ class earnMaxData(models.Model):
     total = models.IntegerField()
 
     def __str__(self):
-        return str(self.uid)
+        return str(self.email)
