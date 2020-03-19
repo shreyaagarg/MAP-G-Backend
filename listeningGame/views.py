@@ -6,6 +6,6 @@ from .models import listeningGameData
 # Create your views here.
 
 class ListeningGameViewSet(viewsets.ModelViewSet):
-    queryset = listeningGameData.objects.all().order_by('email')
+    queryset = listeningGameData.objects.all().order_by('emailId')
     serializer_class = listeningGameDataSerializer
 

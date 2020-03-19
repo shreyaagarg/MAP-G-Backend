@@ -4,4 +4,4 @@ from .models import earnMaxData
 class earnMaxDataSerializer(serializers.ModelSerializer):
     class Meta():
         model = earnMaxData
-        fields = ('email', 'pile', 'scores', 'total')
+        fields = ('emailId', 'pile', 'scores', 'total')

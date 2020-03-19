@@ -6,7 +6,7 @@ from userlogin.models import UserData
 # Create your models here.
 
 class balloonGameData(models.Model):
-    email = models.ForeignKey(UserData, on_delete=models.CASCADE)
+    emailId = models.EmailField(max_length=100, primary_key=True, default='')
     color = ArrayField(models.IntegerField())
     clicks = ArrayField(models.IntegerField())
     amount = ArrayField(models.IntegerField())
@@ -14,5 +14,5 @@ class balloonGameData(models.Model):
 
 
     def __str__(self):
-        return str(self.email)
+        return str(self.emailId)
 
