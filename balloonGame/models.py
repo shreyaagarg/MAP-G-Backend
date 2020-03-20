@@ -8,8 +8,9 @@ from userlogin.models import UserData
 class balloonGameData(models.Model):
     emailId = models.EmailField(max_length=100, primary_key=True, default='')
     color = ArrayField(models.IntegerField())
-    clicks = ArrayField(models.IntegerField())
-    amount = ArrayField(models.IntegerField())
+    clicksBursted = ArrayField(models.IntegerField(), default=list)
+    clicksCollected = ArrayField(models.IntegerField(), default=list)
+    amountCollected = ArrayField(models.IntegerField(), default=list)
     total = models.IntegerField()
 
 
