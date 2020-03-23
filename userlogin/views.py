@@ -17,9 +17,12 @@ def userExist(request):
 
     if emailToCheck:
         user_present = all_users.filter(email=emailToCheck)
+        current_user = all_users.filter(email=emailToCheck).get()
+        games_played_by_user = current_user.games_played
 
         if user_present.exists():
-            return JsonResponse({emailToCheck:"true"})
+            return JsonResponse({emailToCheck:"true",
+                                 'games_played': games_played_by_user})
         else:
             return JsonResponse({emailToCheck:"false"})
 
