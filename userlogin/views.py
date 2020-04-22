@@ -3,6 +3,7 @@ from rest_framework import viewsets
 from .serializers import UserSerializer
 from .models import UserData
 from django.http import JsonResponse
+import ast
 
 # Create your views here.
 
@@ -35,3 +36,23 @@ def userExist(request):
 
     else:
         return JsonResponse({'data':'not_sent'})
+
+
+
+def updateGamesPlayed(request):
+    user_email = request.GET.get('email')
+    games_played_string = request.GET.get('games_played')
+    user_games_played = ast.literal_eval(games_played_string)
+
+    all_users = UserData.objects.all()
+
+    if user_email and user_games_played:
+        user_present = all_users.filter(email=user_email)
+
+        if not user_present:
+            return JsonResponse({'Email':'invalid'})
+
+        current_user = all_users.filter(email=user_email).get()
+        current_user.games_played = user_games_played
+        current_user.save()
+        return JsonResponse({'update':'successful'})

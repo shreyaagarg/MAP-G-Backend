@@ -26,4 +26,5 @@ urlpatterns = [
     path('emotionPredictor', include('emotionPredictor.urls')),
     path('listeningGame', include('listeningGame.urls')),
     path('userExist/', userLoginViews.userExist, name='userExist'),
+    path('updateGamesPlayed/', userLoginViews.updateGamesPlayed, name='updateGamesPlayed'),
 ]
