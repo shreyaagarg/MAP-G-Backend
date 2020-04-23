@@ -11,7 +11,7 @@ class UserData(models.Model):
     teachingField = models.IntegerField(default=0)
     openID = models.CharField(max_length=100, default='000')
     gender = models.IntegerField(default=1)
-    games_played = ArrayField(models.IntegerField(), default = list)
+    games_played = ArrayField(models.BooleanField(), default = list)
 
     def __str__(self):
         return str(self.email_id)
