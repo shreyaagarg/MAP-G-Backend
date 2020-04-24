@@ -32,7 +32,7 @@ def userExist(request):
 
 
         if user_present.exists():
-            return JsonResponse({emailToCheck:"true",
+            return JsonResponse({'emailToCheck':True,
                                     'games_played': games_played_by_user})
         else:
             return JsonResponse({'emailToCheck':False})
