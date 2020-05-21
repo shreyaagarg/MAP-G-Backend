@@ -27,4 +27,5 @@ urlpatterns = [
     path('listeningGame', include('listeningGame.urls')),
     path('userExist/', userLoginViews.userExist, name='userExist'),
     path('updateGamesPlayed/', userLoginViews.updateGamesPlayed, name='updateGamesPlayed'),
+    path('generateReport/', userLoginViews.generateReport, name='generateReport'),
 ]
